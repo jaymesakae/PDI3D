@@ -1,0 +1,42 @@
+Aula2 - PDI3D
+
+Transformação pontual de intensidade:
+    o novo valor do pixel depende apenas do valor original.
+    Ou seja, uma transformação ja definida para os valores do pixel.
+    Exemplos:
+        inversão:
+        IS = imagem de saida
+        iE = imagem de entrada
+        - Is[x, y] = 255 - Ie[x, y]
+        
+        Inversão logaritma
+        Is[x, y] = log(Ie[x, y] + 1)
+        OBS
+            Essa imagem de saida será em ponto flutuante, assim, antes de salvar a imagem, é de extrema importancia normalizar a imagem previamente
+            Pode usar a formula
+                I's = Is - min(Is)
+                I's = (I's/max(I's)) * 255
+
+
+        Transformação Gama:
+            A ideia é deixar a imagem mais brilhante, a formula é:
+                Is[x, y] = IgamaE [x, y]
+            Quao maior o parametro de expoente, o intervalo sera menor mas a alteração será maior, seja pra valores proximos do mais claro quanto pro escuro
+
+
+    Histograma:
+        O histograma serve para analisar as intencidades de cor sobre a imagem, em outras palavras, o ganho de informação sobre as intensidades.
+        A informação espacial acaba sendo desconsiderada
+        
+        Definiççoes de histograma
+            D: vetor de dados da imagem
+            H: vetor contendo os valores do histograma
+            X: vetor contendo as caixas (Valores dos dados da imagem, ou a contagem dos valores que estão sobre o mesmo intervalo)
+            Hi: é dado pelo numero de elementos de D que estão no intervalo [Xi, Xi+1[, sendo que
+                Xi+1 = Xi +delta(X), 
+                x0 = min(D)
+
+        A forma mais eficiente de se fazer o calculo de histograma é, sendo D o vetor de valores
+            Fazer um vetor que consiste em int((D - min(D))/delta(X)), sera retornado o indice do vetor D', considerando que delta(X) é o tamanho das caixas
+
+        

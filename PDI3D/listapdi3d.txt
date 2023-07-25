@@ -1,0 +1,68 @@
+1. Descreva duas metodologias que podem ser utilizadas para visualizar uma imagem volumétrica 3D
+utilizando uma ou mais imagens 2D.
+R: Para visualizar uma imagem 3D utilizando superfíceis 2D temos os métodos axial, sagital e coronal. Na primeira
+visualizamos a figura de baixo, na segunda de lado e na terceira de frente.
+
+2. De que forma a visualização de um volume (volumétrica) se diferencia da visualização de uma
+superfície (representada por polígonos)? Por que transparência é um conceito importante nesse tipo
+de visualização?
+R: A visualização volumétrica funciona através da criação de superfícies, muitas vezes triangulares, as quais representam
+o objeto tridimencional, mas para podermos ver o conteúdo da figura, precisamos de uma certa transparência nas superfícies,
+por isso ela é importante.
+
+3. Descreva como podemos realizar a convolução entre dois sinais digitais f e g utilizando o teorema da
+convolução
+R: Para sinais digitais, podemos aplicar a convolução para cada pixel da imagem por meio de um somatório entre o produto de uma 
+região da imagem e um filtro, o somatório é do tamanho do filtro.
+
+4. Qual a diferença entre os elementos da diagonal e os demais elementos de uma matriz de
+covariância? (matriz apresentada no assunto sobre suavização de imagens 3D)
+R: Os elementos da diagonal representam a variância e indicam a largura da gaussiana nas direções x e y. Já
+os elementos fora da diagonal representam o grau de familiaridade de x com y, se trata da covariância, quanto
+maior esses valores, menor a dispersão da gaussiana na direção perpendicular à essa coordenada x, y.
+
+5. Escreva uma equação que pode ser utilizada para o cálculo em um código da derivada segunda de
+uma função𝑓(𝑥, 𝑦)em relação à variável X
+R: f(x + 1, y) - 2*f(x, y) + f(x - 1, y)
+
+7. Apresente e explique um filtro que pode ser utilizado para o cálculo da derivada cruzada de uma
+função de duas variáveis.
+R: [[1 -1]  [-1 1]], esse filtro vem da equação f(x, y) - f(x + 1, y) - f(x, y + 1) + f(x+1,y+1)
+
+8. Seja 𝐻 uma matriz Hessiana, qual será o resultado da operação 𝐻 − 𝐻^𝑇, onde T indica a matriz transposta?
+R: O resultado é a matriz nula, pois a matriz hessiana é simétrica e H = H^T
+
+9. Quais as diferenças entre as informações fornecidas pela matriz Hessiana e o vetor gradiente?
+R: A hessiana nos traz informações mais precisas que o vetor gradiente por usar derivadas de segunda ordem,
+com ela, conseguimos detectar estruturas diferentes, como bolhas, vasos (tubos), regiões uniformes e pratos.
+
+10. Uma matriz Hessiana 3x3 possuindo um autovalor muito negativo e outros dois autovalores próximos
+de zero descreve que tipo de estrutura?
+R: Prato branco (minha dica pra decorar isso aqui é que valor muito negativo indica concavidade da curva pra baixo, por isso o topo é muito positivo, indicando branco
+n sei se é vdd foi so oq eu usei pra decorar kkkkk)
+
+11. No filtro Frangi, porque alguns termos aparecem como 𝑒
+𝑥
+enquanto que outros aparecem como 1 −
+𝑒
+𝑥
+?
+R: Para deixar o filtro mais robusto, evitando a detecção de estruturas grandes e com grandes escalas, portanto, evitando ruídos e texturas.
+
+12. Em filtragem bilateral, que critério pode ser utilizado para ponderarmos de forma similar o termo de
+distância e o termo de diferença de intensidade?
+R: Podemos ponderar a distância atribuindo mais peso para pixels próximos do pixel a ser filtrado e
+podemos ponderar a intensidade atribuindo mais peso para pixels com intensidade parecida com o pixel a ser filtrado. Isso faz com que o efeito de borda seja diminuido
+ou inexistente
+
+13. Descreva como podemos calcular a Transformada de Fourier de uma imagem 3D utilizando uma
+sequência de Transformadas de Fourier unidimensionais
+R: Existe uma propriedade matemática provada através de algumas integrais que diz que podemos utilizar Transformadas de Fourier unidimensionais (TFU) 
+para formar uma transformada de fourier de ordem maior, por exemplo, para uma imagem 3D, podemos aplicar TFU nas linhas, depois nas colunas e depois na profundidade
+para obter a transformada 3D. Isso é interessante pois podemos ganhar desempenho nos nossos algoritmos, o algoritmo ppara TF 3D levaria da ordem de O(n^6),
+enquanto aplicar uma transformada rápida de fourier para sinais unidimensionais leva O(nlogn), e aplicando da forma dita anteriormente leva a O(n³logn)
+
+16. Calcule a aproximação da função 𝑓(𝑥) = 𝑥³
+por Série de Taylor de segunda ordem em torno do
+ponto 𝑥 = 2.
+R: Eu acho que é 8 mesmo, pq ele n passou o delta x pra usar naquela equação de Taylor: f(x + deltax) = f(x) + (df(x)/dx)*deltax + 1/2 (df(x)/dx²)*deltax²
