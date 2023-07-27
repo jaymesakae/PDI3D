@@ -18,7 +18,7 @@ Os notebooks estão organizados de forma a apresentação dos conceitos.
 
 A linguagem que será apresentada a disciplina é Python3.
 
-Os pacotes utilizados nesta disciplina são:
+Os pacotes e versões utilizados nesta disciplina são:
 * Numpy (2.23.5)
 * Scipy (1.9.3)
 * Notebook-jupyter (6.5.2)
