@@ -16,7 +16,7 @@ Neste curso veremos os seguintes tópicos:
 
 Os notebooks estão organizados de forma a apresentação dos conceitos.
 
-A linguagem que será apresentada a disciplina é Python3.
+A linguagem que será apresentada a disciplina é Python (3.8.15).
 
 Os pacotes e versões utilizados nesta disciplina são:
 * Numpy (2.23.5)
