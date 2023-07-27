@@ -16,4 +16,20 @@ Neste curso veremos os seguintes tópicos:
 
 Os notebooks estão organizados de forma a apresentação dos conceitos.
 
+A linguagem que será apresentada a disciplina é Python3.
+
+Os pacotes utilizados nesta disciplina são:
+* numpy (2.23.5)
+* scipy (1.9.3)
+* notebook-jupyter (6.5.2)
+* matplotlib (3.6.2)
+* scikit-learn (1.1.3)
+* opencv (4.6.0)
+* tifffile (2022.10.10)
+* ipywidgets (4.3.2)
+* vtk (9.2.2)
+* itk (5.2.0)
+* simpleitk (2.1.1.1)
+* itkwidgets (0.32.0)
+
 Em alguns notebooks precisam de arquivos que estão no link: https://bit.ly/44ETvrH
